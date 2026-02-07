@@ -1,0 +1,38 @@
+# ===========================================================================
+# Leaderboard System — Requirements
+# Stack: Python 3.11+, Flask, MySQL 8, Redis, SQLAlchemy
+# ===========================================================================
+
+# --- Web Framework ---
+Flask==3.1.0
+flask-restful==0.3.10
+flask-cors==5.0.1
+
+# --- Database ---
+SQLAlchemy==2.0.36
+Flask-SQLAlchemy==3.1.1
+PyMySQL==1.1.1
+cryptography==44.0.0          # Required by PyMySQL for sha256 auth
+Flask-Migrate==4.1.0          # Alembic-based migrations
+
+# --- Caching / Real-time ---
+redis==5.2.1
+Flask-Caching==2.3.0
+
+# --- Serialization & Validation ---
+marshmallow==3.23.2
+flask-marshmallow==1.2.1
+marshmallow-sqlalchemy==1.1.0
+
+# --- Concurrency helpers ---
+celery==5.4.0                 # Async task queue (optional, for heavy recalcs)
+
+# --- Utilities ---
+python-dotenv==1.0.1
+gunicorn==23.0.0              # Production WSGI server
+
+# --- Dev / Testing ---
+pytest==8.3.4
+pytest-flask==1.3.0
+factory-boy==3.3.1
+Faker==33.1.0
